@@ -3,6 +3,7 @@ import { WebcamImage } from 'ngx-webcam';
 import { Observable, Subject } from 'rxjs';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import {  Mat } from 'opencv-ts';
 
 @Component({
   selector: 'app-landing',
@@ -11,11 +12,25 @@ import html2canvas from 'html2canvas';
 })
 export class LandingComponent implements OnInit {
 
-  title = 'frontend';
+  
+   
+
+
+
+
+
 
   trigger: Subject<void> = new Subject<void>();
   image!: string;
   imageDataUrl!: string;
+
+
+
+
+
+
+
+  //img = Mat.fromImageData(this.image);
 
 
   public get triggerObservable(): Observable<void> {

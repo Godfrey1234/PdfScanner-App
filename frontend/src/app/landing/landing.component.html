@@ -2,7 +2,7 @@
 <div class="fixed background bg-[#161D29] w-full min-h-screen">
 
 <app-navbar></app-navbar>
-<p class=" text-white ml-4 mt-8">Scan Your Document</p>
+<p class=" text-white ml-4 mt-8 font-bold">Scan Your Document</p>
 <div class="mt-4 mx-4">
 <webcam  [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
 </div>
