@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FilterComponent } from './filter/filter.component';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'Navbar',component:NavbarComponent},
   {path:'landing',component:LandingComponent},
   {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent}
+  {path:'register',component:RegisterComponent},
+  {path:'filter',component:FilterComponent}
 
 
 ];

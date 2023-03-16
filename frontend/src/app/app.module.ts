@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { WebcamModule } from 'ngx-webcam';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterComponent } from './filter/filter.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LandingComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

@@ -45,9 +45,9 @@ export class LandingComponent implements OnInit {
     this.trigger.next();
     console.log(this.image)
 
-    const doc = new jsPDF();
-    doc.addImage(this.image, 'PNG', 0, 0, 230, 300);
-    doc.save('image.pdf');
+    // const doc = new jsPDF();
+    // doc.addImage(this.image, 'PNG', 0, 0, 230, 300);
+    // doc.save('image.pdf');
   }
 
 
