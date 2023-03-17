@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PdfServiceService {
 
-  baseURl = "http://localhost:3000/"
+  baseURl = "https://pdf-scanner-puzphkwas-godfrey1234.vercel.app/"
 
   constructor(private http:HttpClient) { }
 
