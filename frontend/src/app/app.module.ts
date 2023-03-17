@@ -11,6 +11,9 @@ import { RegisterComponent } from './register/register.component';
 import { WebcamModule } from 'ngx-webcam';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent } from './filter/filter.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -28,7 +31,15 @@ import { FilterComponent } from './filter/filter.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    WebcamModule
+    WebcamModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'landing', component: LandingComponent }
+      
+    
+    ])
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
