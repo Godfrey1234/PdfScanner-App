@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 
 app.get(`/`, (req, res) => { 
 
-    res.json({info:'Node.js,Express, and Postgres API'})
+    res.json({'Server running successfully'})
  });
 
 
