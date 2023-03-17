@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 //const db = require("../database Connection/db-config");
 const routes = require("../routes/routes")
 
+
+const cors = require('cors')
+
 app.use(bodyParser.json());
 
 
@@ -13,13 +16,10 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-app.use(function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST,GET,DELETE,PUT,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Accept');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  next();    
-});
+//cors
+
+app.use(cors({origin:'*'}))
+
 
 app.get(`/`, (req, res) => { 
 
