@@ -1,10 +1,11 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 // eslint-disable-next-line vue/multi-word-component-names
+
 <template>
-    <app-navbar></app-navbar>
+  <navbar class="mb-10"></navbar> 
     <div>
   
-      <div class="row1 mt-8 mb-4 "   v-if="imageDataUrl" >
+      <div class="row1 mt-16 mb-4 "   v-if="imageDataUrl" >
         <p class="mb-4 text-white font-bold text-lg">Document <span>History</span></p>
         <div class="doc overflow-scroll flex space-x-2">
            <a href="imageDataUrl"> <img :src="imageDataUrl" class="w-24 h-auto"></a>
@@ -41,8 +42,14 @@
   
   <script>
   import { BrowserMultiFormatReader } from '@zxing/library';
+  import navbar from '../components/navbar.vue'
   
   export default {
+ 
+    name: 'MyApp',
+  components: {
+    navbar,
+  },
     data() {
       return {
         imageDataUrl: null,
@@ -75,7 +82,7 @@
         this.drawCanvas(canvas);
       },
       stopScanner() {
-        this.startS = 0;
+        
         if (this.videoStream) {
           this.videoStream.getTracks().forEach(track => {
             track.stop();
@@ -108,8 +115,9 @@
     mounted() {
       this.startScanner();
     },
-    beforeDestroy() {
+    beforeUnmount() {
       this.stopScanner();
+      this.$forceUpdate();
     }
   };
   </script>

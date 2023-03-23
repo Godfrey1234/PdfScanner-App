@@ -71,9 +71,10 @@ import 'mosha-vue-toastify/dist/style.css';
        
       })
       .then(response => {
-        console.log(response.data);
-
+        console.log(response.data.token);
         
+        sessionStorage.setItem('token',response.data.token)
+        this.$router.push('/landing')
        
        
         

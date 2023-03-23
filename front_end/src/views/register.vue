@@ -90,6 +90,8 @@
       })
       .then(response => {
         console.log(response.data);
+
+        if(response.date === 'successfully registered'){  this.$router.push('/landing') }
       })
       .catch(error => {
         console.log(error);
